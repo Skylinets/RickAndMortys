@@ -1,4 +1,4 @@
-package com.skyline.rickandmortys.presentation.ui
+package com.skyline.rickandmortys.ui
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -10,9 +10,8 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.skyline.rickandmortys.data.remote.RickAndMortyService
-import com.skyline.rickandmortys.presentation.ui.theme.RickAndMortysTheme
-import retrofit2.Retrofit
+import com.skyline.network.TestFile
+import com.skyline.rickandmortys.ui.theme.RickAndMortysTheme
 
 
 class MainActivity : ComponentActivity() {
@@ -25,14 +24,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    val retrofit = Retrofit.Builder()
-                        .baseUrl("https://rickandmortyapi.com/")
-                        .build()
-                    val rickAndMortyService: RickAndMortyService = retrofit.create(
-                        RickAndMortyService::class.java)
-                    rickAndMortyService.getCharacterById()
-
-                    Greeting("Android")
+                    TestFile()
                 }
             }
         }

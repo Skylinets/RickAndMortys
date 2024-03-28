@@ -1,4 +1,4 @@
-package com.skyline.rickandmortys.presentation.ui.theme
+package com.skyline.rickandmortys.ui.theme
 
 import android.app.Activity
 import android.os.Build

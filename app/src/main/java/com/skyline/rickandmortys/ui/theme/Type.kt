@@ -1,4 +1,4 @@
-package com.skyline.rickandmortys.presentation.ui.theme
+package com.skyline.rickandmortys.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle
